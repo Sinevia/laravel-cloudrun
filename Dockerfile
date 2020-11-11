@@ -2,8 +2,8 @@ FROM php:7.4-apache
 
 RUN apt-get update -y  \
     && apt-get install -y build-essential \
-#RUN apt-get install -y zlib1g-dev
-#RUN apt-get install -y zip unzip
+    && apt-get install -y zlib1g-dev
+    && RUN apt-get install -y zip unzip
 #RUN apt-get install -y libzip-dev
 #RUN apt-get install -y libwebp-dev
 #RUN apt-get install -y libjpeg62-turbo-dev

@@ -14,7 +14,6 @@ RUN apt-get update -y  \
     && apt-get install -y libcurl4 \
     && apt-get install -y libcurl4-openssl-dev \
     && apt-get install -y libicu-dev \
-#RUN apt-get install -y libmagickwand-dev
 
 # For Oniguruma not found error
     && apt-get install -y libonig-dev
@@ -64,9 +63,9 @@ RUN docker-php-ext-install zip
 # RUN echo "opcache.revalidate_freq=2" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
 # RUN echo "opcache.fast_shutdown=1" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
 
-# install imagick
-# RUN pecl install imagick-3.4.4
-RUN docker-php-ext-install imagick
+# Install imagick
+RUN apt-get install -y libmagickwand-dev
+RUN pecl install imagick-3.4.4
 RUN docker-php-ext-enable imagick
 
 # clean image

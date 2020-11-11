@@ -20,9 +20,15 @@ RUN apt-get update -y  \
 # For Oniguruma not found error
     && apt-get install -y libonig-dev
 
+# Install PDP
 #RUN docker-php-ext-install mysql
-RUN docker-php-ext-install pdo 
+RUN docker-php-ext-install pdo
+
+# Install PDO SQLite 3
+RUN apt-get install libsqlite3-dev
 RUN docker-php-ext-install pdo_sqlite
+
+# Install PDO MySQL
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 RUN docker-php-ext-install pdo_mysql
 #RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd
@@ -34,8 +40,10 @@ RUN docker-php-ext-configure mbstring
 RUN docker-php-ext-install mbstring
 #RUN docker-php-ext-configure opcache
 #RUN docker-php-ext-install opcache
-#RUN docker-php-ext-configure zip
-#RUN docker-php-ext-install zip
+
+# Install Zip
+RUN docker-php-ext-configure zip
+RUN docker-php-ext-install zip
 
 # install xdebug
 # RUN pecl install xdebug

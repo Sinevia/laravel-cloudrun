@@ -4,7 +4,6 @@ RUN apt-get update -y  \
     && apt-get install -y build-essential \
     && apt-get install -y zlib1g-dev \
     && apt-get install -y zip unzip \
-#RUN apt-get install -y libzip-dev
 #RUN apt-get install -y libwebp-dev
 #RUN apt-get install -y libjpeg62-turbo-dev
 #RUN apt-get install -y libpng-dev
@@ -42,6 +41,7 @@ RUN docker-php-ext-install mbstring
 #RUN docker-php-ext-install opcache
 
 # Install Zip
+RUN apt-get install -y libzip-dev
 RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
 

@@ -65,7 +65,8 @@ RUN docker-php-ext-install zip
 # RUN echo "opcache.fast_shutdown=1" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
 
 # install imagick
-RUN pecl install imagick-3.4.4
+# RUN pecl install imagick-3.4.4
+RUN docker-php-ext-install imagick
 RUN docker-php-ext-enable imagick
 
 # clean image

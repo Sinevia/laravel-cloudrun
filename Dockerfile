@@ -22,11 +22,11 @@ RUN apt-get update -y  \
 
 #RUN docker-php-ext-install mysql
 RUN docker-php-ext-install pdo 
-# RUN docker-php-ext-install pdo_sqlite
+RUN docker-php-ext-install pdo_sqlite
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 RUN docker-php-ext-install pdo_mysql
 #RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd
-#RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 #RUN docker-php-ext-install gd
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl

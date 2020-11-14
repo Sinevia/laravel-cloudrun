@@ -95,4 +95,5 @@ RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
 
 # clean image
+RUN apt-get autoremove
 RUN apt-get clean

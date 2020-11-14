@@ -1,4 +1,4 @@
-# Laravel Cloudrun
+# Laravel on Google CloudRun
 
 This is a docker image to run Laravel on Google CloudRun. 
 

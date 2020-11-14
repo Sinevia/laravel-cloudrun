@@ -30,38 +30,28 @@ RUN docker-php-ext-install pdo_sqlite
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 RUN docker-php-ext-install pdo_mysql
 #RUN docker-php-ext-configure mysqli --with-mysqli=mysqlnd
+
+
+# Install gd
 #RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 #RUN docker-php-ext-install gd
+
+# Install dom
+RUN docker-php-ext-configure dom
+RUN docker-php-ext-install dom
+
+# Install intl
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
+
+# Install mbstring
 RUN docker-php-ext-configure mbstring
 RUN docker-php-ext-install mbstring
-#RUN docker-php-ext-configure opcache
-#RUN docker-php-ext-install opcache
 
 # Install Zip
 RUN apt-get install -y libzip-dev
 RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
-
-# install xdebug
-# RUN pecl install xdebug
-# RUN docker-php-ext-enable xdebug
-# RUN echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.remote_autostart=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.default_enable=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.remote_host=host.docker.internal" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.remote_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.remote_connect_back=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.profiler_enable=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-# RUN echo "xdebug.remote_log=\"/tmp/xdebug.log\"" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-
-# configure opcache
-# RUN echo "opcache.memory_consumption=128" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
-# RUN echo "opcache.interned_strings_buffer=8" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
-# RUN echo "opcache.max_accelerated_files=4000" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
-# RUN echo "opcache.revalidate_freq=2" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
-# RUN echo "opcache.fast_shutdown=1" >> /usr/local/etc/php/conf.d/opcache-recommended.ini
 
 # Install imagick
 RUN apt-get install -y libmagickwand-dev

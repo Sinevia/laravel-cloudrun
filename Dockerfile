@@ -48,6 +48,10 @@ RUN docker-php-ext-install intl
 RUN docker-php-ext-configure mbstring
 RUN docker-php-ext-install mbstring
 
+# Install intl
+RUN docker-php-ext-configure simplexml
+RUN docker-php-ext-install simplexml
+
 # Install Zip
 RUN apt-get install -y libzip-dev
 RUN docker-php-ext-configure zip

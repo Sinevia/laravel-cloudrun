@@ -1,22 +1,22 @@
 FROM php:7.4-apache
 
-RUN apt-get update -y  \
-    && apt-get install -y build-essential \
-    && apt-get install -y zlib1g-dev \
-    && apt-get install -y zip unzip \
-#RUN apt-get install -y libwebp-dev
+RUN apt-get update -y
+RUN apt-get install -y build-essential
+RUN apt-get install -y zlib1g-dev
+RUN apt-get install -y zip unzip
+RUN apt-get install -y libwebp-dev
 #RUN apt-get install -y libjpeg62-turbo-dev
 #RUN apt-get install -y libpng-dev
 #RUN apt-get install -y libxpm-dev
 #RUN apt-get install -y libfreetype6-dev
 #RUN apt-get install -y libmcrypt-dev
-    && apt-get install -y curl \
-    && apt-get install -y libcurl4 \
-    && apt-get install -y libcurl4-openssl-dev \
-    && apt-get install -y libicu-dev \
+RUN apt-get install -y curl
+RUN apt-get install -y libcurl4
+RUN apt-get install -y libcurl4-openssl-dev
+RUN apt-get install -y libicu-dev
 
 # For Oniguruma not found error
-    && apt-get install -y libonig-dev
+RUN apt-get install -y libonig-dev
 
 # Install PDP
 #RUN docker-php-ext-install mysql

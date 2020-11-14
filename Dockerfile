@@ -94,6 +94,12 @@ RUN apt-get install -y libzip-dev
 RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
 
+# Install composer
+ENV COMPOSER_HOME /composer
+ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
+ENV COMPOSER_ALLOW_SUPERUSER 1
+RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
+
 # clean image
 RUN apt-get autoremove
 RUN apt-get clean

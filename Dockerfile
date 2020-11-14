@@ -35,8 +35,8 @@ RUN docker-php-ext-install pdo_mysql
 
 
 # Install gd
-#RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
-#RUN docker-php-ext-install gd
+RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
+RUN docker-php-ext-install gd
 
 # Install dom
 RUN apt-get install -y libxml2-dev

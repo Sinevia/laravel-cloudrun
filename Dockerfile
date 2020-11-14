@@ -7,7 +7,6 @@ RUN apt-get install -y build-essential
 RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y zip unzip
 RUN apt-get install -y libwebp-dev
-#RUN apt-get install -y libxpm-dev
 #RUN apt-get install -y libmcrypt-dev
 RUN apt-get install -y curl
 RUN apt-get install -y libcurl4
@@ -42,6 +41,7 @@ RUN docker-php-ext-install exif
 RUN apt-get install -y libfreetype6-dev
 RUN apt-get install -y libjpeg62-turbo-dev
 RUN apt-get install -y libpng-dev
+RUN apt-get install -y libxpm-dev
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 RUN docker-php-ext-install gd
 

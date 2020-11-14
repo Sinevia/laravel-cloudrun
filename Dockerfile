@@ -8,7 +8,6 @@ RUN apt-get install -y zlib1g-dev
 RUN apt-get install -y zip unzip
 RUN apt-get install -y libwebp-dev
 #RUN apt-get install -y libjpeg62-turbo-dev
-#RUN apt-get install -y libpng-dev
 #RUN apt-get install -y libxpm-dev
 #RUN apt-get install -y libfreetype6-dev
 #RUN apt-get install -y libmcrypt-dev
@@ -35,6 +34,7 @@ RUN docker-php-ext-install pdo_mysql
 
 
 # Install gd
+RUN apt-get install -y libpng-dev
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp
 RUN docker-php-ext-install gd
 

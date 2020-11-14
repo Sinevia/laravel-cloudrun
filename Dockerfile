@@ -39,6 +39,7 @@ RUN docker-php-ext-install pdo_mysql
 #RUN docker-php-ext-install gd
 
 # Install dom
+RUN apt-get install -y libxml2-dev
 RUN docker-php-ext-configure dom
 RUN docker-php-ext-install dom
 

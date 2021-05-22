@@ -22,7 +22,7 @@ Using the image will save approximately 10-15 minutes of deployment time
 ## Usage
 
 ```
-FROM sinevia/laravel-cloudrun:v1.0.0
+FROM sinevia/laravel-cloudrun:v2.0.0
 
 WORKDIR /var/www/
 COPY . /var/www/
@@ -40,3 +40,5 @@ RUN chmod 777 -R /var/www/storage/ && \
     chown -R www-data:www-data /var/www/ && \     
     a2enmod rewrite
 ```
+
+For PHP 7.4 use v1.1.0

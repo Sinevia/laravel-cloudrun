@@ -2,6 +2,7 @@ FROM php:8-apache
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Install required packages
 RUN apt-get update -y
 RUN apt-get install -y build-essential
 RUN apt-get install -y zlib1g-dev

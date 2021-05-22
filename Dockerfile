@@ -62,9 +62,9 @@ RUN docker-php-ext-install intl
 RUN docker-php-ext-configure mbstring
 RUN docker-php-ext-install mbstring
 
-# Install intl
-RUN docker-php-ext-configure simplexml
-RUN docker-php-ext-install simplexml
+# Install opcache
+RUN docker-php-ext-configure opcache
+RUN docker-php-ext-install opcache
 
 # Install PCNTL
 RUN docker-php-ext-configure pcntl
@@ -81,7 +81,11 @@ RUN docker-php-ext-install pdo_sqlite
 RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
 RUN docker-php-ext-install pdo_mysql
 
-# Install XML
+# Install simplexml
+RUN docker-php-ext-configure simplexml
+RUN docker-php-ext-install simplexml
+
+# Install tokenizer
 RUN docker-php-ext-configure tokenizer
 RUN docker-php-ext-install tokenizer
 

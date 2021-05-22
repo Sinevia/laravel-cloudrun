@@ -41,4 +41,6 @@ RUN chmod 777 -R /var/www/storage/ && \
     a2enmod rewrite
 ```
 
+## Notes
+For PHP 8.0 use v2.0.0 (not no ImageMagick is available for PHP 8 yet)
 For PHP 7.4 use v1.1.0

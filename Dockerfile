@@ -49,10 +49,10 @@ RUN docker-php-ext-install gd
 RUN docker-php-ext-configure iconv
 RUN docker-php-ext-install iconv
 
-# Install imagick
-RUN apt-get install -y libmagickwand-dev
-RUN pecl install imagick-3.4.4
-RUN docker-php-ext-enable imagick
+# Install imagick (not available for PHP8 yet)
+# RUN apt-get install -y libmagickwand-dev
+# RUN pecl install imagick-3.4.4
+# RUN docker-php-ext-enable imagick
 
 # Install intl
 RUN docker-php-ext-configure intl

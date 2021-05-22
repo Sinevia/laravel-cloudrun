@@ -106,5 +106,5 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer
 
 # clean image
-RUN apt-get autoremove
-RUN apt-get clean
+RUN apt-get autoremove -y
+RUN apt-get clean -y

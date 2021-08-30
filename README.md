@@ -22,7 +22,7 @@ Using the image will save approximately 10-15 minutes of deployment time
 ## Usage
 
 ```
-FROM sinevia/laravel-cloudrun:v2.0.0
+FROM sinevia/laravel-cloudrun:v2.1.0
 
 WORKDIR /var/www/
 COPY . /var/www/
@@ -46,3 +46,7 @@ RUN chmod 777 -R /var/www/storage/ && \
 For PHP 8.0 use v2.0.0 (note ImageMagick is available for PHP 8 yet)
 
 For PHP 7.4 use v1.1.0
+
+## Changelog
+
+2021-08-30 - image size reduced

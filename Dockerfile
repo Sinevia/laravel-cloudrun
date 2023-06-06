@@ -1,4 +1,4 @@
-FROM php:8-apache
+FROM php:8.1-apache
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV COMPOSER_HOME /composer

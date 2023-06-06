@@ -1,0 +1,23 @@
+version: 2
+
+tasks:
+  build:
+    cmds:
+      # - docker build .
+      - docker build -t sinevia/laravel-cloudrun .
+
+  login:
+    cmds:
+      - docker login
+
+  tag:
+    cmds:
+      - docker tag sinevia/laravel-cloudrun sinevia/laravel-cloudrun:v2.2.0
+
+  push:
+    cmds:
+      - docker push sinevia/laravel-cloudrun:v2.2.0
+
+
+
+     

@@ -12,13 +12,15 @@ RUN apt-get update -y && \
     apt-get install -y zlib1g-dev && \
     apt-get install -y zip unzip && \
     apt-get install -y libwebp-dev && \
-    #RUN apt-get install -y libmcrypt-dev && \
+    apt-get install -y libmcrypt-dev && \
     apt-get install -y curl && \
     apt-get install -y libcurl4 && \
     apt-get install -y libcurl4-openssl-dev && \
     apt-get install -y libicu-dev && \
     # For Oniguruma not found error
-    apt-get install -y libonig-dev && \
+    apt-get install -y libonig-dev
+
+RUN apt-get update -y && \
     # Install bcmath
     docker-php-ext-configure bcmath && \
     docker-php-ext-install bcmath && \
@@ -34,7 +36,9 @@ RUN apt-get update -y && \
     docker-php-ext-install dom && \
     # Install exif
     docker-php-ext-configure exif && \
-    docker-php-ext-install exif && \
+    docker-php-ext-install exif
+
+RUN apt-get update -y && \
     # Install gd
     apt-get install -y libfreetype6-dev && \
     apt-get install -y libjpeg62-turbo-dev && \
@@ -44,11 +48,15 @@ RUN apt-get update -y && \
     docker-php-ext-install gd && \
     # Install iconv
     docker-php-ext-configure iconv && \
-    docker-php-ext-install iconv && \
+    docker-php-ext-install iconv
+
+RUN apt-get update -y && \
     # Install imagick (not available for PHP8 yet)
-    # RUN apt-get install -y libmagickwand-dev
-    # RUN pecl install imagick-3.4.4
-    # RUN docker-php-ext-enable imagick
+    apt-get install -y libmagickwand-dev && \
+    pecl install imagick-3.7.0 && \
+    docker-php-ext-enable imagick
+
+RUN apt-get update -y && \
     # Install intl
     docker-php-ext-configure intl && \
     docker-php-ext-install intl && \
@@ -60,7 +68,9 @@ RUN apt-get update -y && \
     docker-php-ext-install opcache && \
     # Install PCNTL
     docker-php-ext-configure pcntl && \
-    docker-php-ext-install pcntl && \
+    docker-php-ext-install pcntl
+
+RUN apt-get update -y && \
     # Install PDO
     docker-php-ext-install pdo && \
     # Install PDO SQLite 3
@@ -72,16 +82,15 @@ RUN apt-get update -y && \
     # Install simplexml
     docker-php-ext-configure simplexml && \
     docker-php-ext-install simplexml && \
-    # Install tokenizer
-    docker-php-ext-configure tokenizer && \
-    docker-php-ext-install tokenizer && \
     # Install XML
     docker-php-ext-configure xml && \
     docker-php-ext-install xml && \
     # Install Zip
     apt-get install -y libzip-dev && \
     docker-php-ext-configure zip && \
-    docker-php-ext-install zip && \
+    docker-php-ext-install zip
+
+RUN apt-get update -y && \
     # Install composer
     curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin/ --filename=composer && \
     # clean image

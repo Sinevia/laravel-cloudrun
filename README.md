@@ -42,13 +42,13 @@ RUN chmod 777 -R /var/www/storage/ && \
 ```
 
 ## Notes
-For PHP 8.4 use v2.4.0 (note ImageMagick is available for PHP 8 yet)
+For PHP 8.4 use v2.4.0
 
-For PHP 8.3 use v2.3.0 (note ImageMagick is available for PHP 8 yet)
+For PHP 8.3 use v2.3.0
 
-For PHP 8.2 use v2.2.1 (note ImageMagick is available for PHP 8 yet)
+For PHP 8.2 use v2.2.1
 
-For PHP 8.1 use v2.2.0 (note ImageMagick is available for PHP 8 yet)
+For PHP 8.1 use v2.2.0
 
 For PHP 8.0 use v2.0.0 (note ImageMagick is available for PHP 8 yet)
 

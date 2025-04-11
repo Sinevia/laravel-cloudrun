@@ -53,7 +53,7 @@ RUN apt-get update -y && \
 RUN apt-get update -y && \
     # Install imagick (not available for PHP8 yet)
     apt-get install -y libmagickwand-dev && \
-    pecl install imagick-3.7.0 && \
+    pecl install imagick-3.8.0 && \
     docker-php-ext-enable imagick
 
 RUN apt-get update -y && \

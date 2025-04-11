@@ -42,14 +42,19 @@ RUN chmod 777 -R /var/www/storage/ && \
 ```
 
 ## Notes
+For PHP 8.4 use v2.4.0 (note ImageMagick is available for PHP 8 yet)
 
-For PHP 8.2 use v2.2.0 (note ImageMagick is available for PHP 8 yet)
+For PHP 8.3 use v2.3.0 (note ImageMagick is available for PHP 8 yet)
+
+For PHP 8.2 use v2.2.1 (note ImageMagick is available for PHP 8 yet)
+
+For PHP 8.1 use v2.2.0 (note ImageMagick is available for PHP 8 yet)
 
 For PHP 8.0 use v2.0.0 (note ImageMagick is available for PHP 8 yet)
 
 For PHP 7.4 use v1.1.0
 
 ## Changelog
-
-2022-04-11 - PHP 8.2
+2023-06-06 - PHP 8.2 (v2.2.0)
+2023-06-06 - PHP 8.1 (v2.2.0)
 2021-08-30 - image size reduced

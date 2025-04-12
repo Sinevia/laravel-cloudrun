@@ -55,6 +55,8 @@ For PHP 8.0 use v2.0.0 (note ImageMagick is available for PHP 8 yet)
 For PHP 7.4 use v1.1.0
 
 ## Changelog
+2025-04-10 - PHP 8.4 (v2.4.0)
+2025-04-10 - PHP 8.3 (v2.3.0)
 2023-06-06 - PHP 8.2 (v2.2.0)
 2023-06-06 - PHP 8.1 (v2.2.0)
 2021-08-30 - image size reduced

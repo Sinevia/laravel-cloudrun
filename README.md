@@ -22,7 +22,7 @@ Using the image will save approximately 10-15 minutes of deployment time
 ## Usage
 
 ```
-FROM sinevia/laravel-cloudrun:v2.3.0
+FROM sinevia/laravel-cloudrun:v2.4.0
 
 WORKDIR /var/www/
 COPY . /var/www/
